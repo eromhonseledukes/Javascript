@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //LOOPS are block of codes or statements that are executed repeatedly or multiple times.
+        //loops are  widely used when you want to display a series of numbers or accept repititive inputs
+        // like you want write a programme to count from zero to one thousnd or one million
+        // There are three(3) different types of loops. All can be used to achieve same result
+
+        // 1. while Loop    2. for loop.   3. do-while loop
+
+        // 1. while loop:   Execute a block of codes as long as given condition remain true
+
+        // Example is to write a programm to add the sum of 1o numbers
+
+        // initialisation section: Determines the entry or starting point of the loop
+        var i = 0;
+        var sum = 0;
+
+        // conditional section: This determine where the loop should stop
+        // any loop without a conditional section is an infinite or endles loop
+        while(i <= 20){    // condition
+            sum = sum + i;    // statement 1
+
+            // increment and decrement section: Determines the progress of the loop
+            i = i + 1;        // statement 2
+        }
+        alert(`sum of first 20 numbers: ` + sum);
+
+        // 2. for loop: also has initialisation, conditional and increments/decrement section 
+        // it write a programme using a forloop that will accept any randon number from user and it will generate the first 10 multiples of that number
+
+        var inputNum = prompt('Enter any number : ');
+        var result = 0;
+        document.write(`multiples of : ` + inputNum + '<br />');
+        for(var i = 1; i <= 10; i++){
+            result = inputNum * i;
+            document.write(inputNum + ` * ` + i + ` = ` + result + '<br />');
+        }
+        // Difference btw a function and a method is that function is usually independent of an object. A method is not independent of an object. At above prompt if a function bcos is not associated with an object while write is a method
+
+
+        //3. do-while
+        // both while and do-while are similar in the sence that they both executes a condition until it becomes false
+        // difference is that do-while loop starts with do keyword and executes the body of the loop at least once b4 evaluating the condition
+        
+        //EXAMPLE 1
+        var answer = '';
+        do {
+        answer = prompt('Capital of Nigeria:','');
+        }
+        while (answer != 'Abuja');
+        alert('Capital of Nigeria is: '+ answer);
+
+
+        
+
+    </script>
+    
+</body>
+</html>

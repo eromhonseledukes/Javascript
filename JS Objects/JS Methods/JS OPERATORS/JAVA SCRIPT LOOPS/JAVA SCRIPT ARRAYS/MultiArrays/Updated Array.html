@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiArrays</title>
+
+    
+
+<script>
+    // ARRAYS
+    // arrays are collections of values stored in adjacent memory locations
+    // they are also collections of values of similar data types
+    // arrays help in efficient management of your system memory space.
+
+    //EXAMPLE
+    // To write a program that stores the names of a thousand Employees
+    // you can use a single array name to store the names of the employee instead of declaring a variable for each employee
+    // All elements in an array must be of a similar data type, i.e., integers or strings
+    // Array index (index of array) is known as the position of the array element
+    // values of arrays are also referred to as the elements of the array
+    // 2 types of Array-- Single Dimension and Multi-dimensional arrays
+    // Single-Dimension array: All elements are stored in a single row in the allocated memory location
+    // length of an array is fixed at declaration
+    // arrays start indexing from zero. the first element starts from zero
+
+    var marital_status = ['Single', 'Married', 'Divorced'];
+
+    alert('List of marital status: \n' + marital_status[0] + ', ' + marital_status[1] + ', ' + marital_status[2]);
+
+    // Multi-dimensional Arrays
+
+    // Stores combinations of values of a single type in two or more dimensions
+
+    // Define a multi-dimensional array to store employee details
+var employees = [
+    ["John Doe", 30, "Software Engineer"],
+    ["Jane Smith", 25, "UX Designer"],
+    ["Michael Johnson", 35, "Project Manager"],
+    // Add more employee details as needed
+];
+
+
+// Function to display all employee details
+function displayEmployees() {
+    var employeeDetails = "Employee Details:\n";
+    employees.forEach(function(employee, index) {
+        employeeDetails += "Employee " + (index + 1) + ":\n";
+        employeeDetails += "Name: " + employee[0] + "\n";
+        employeeDetails += "Age: " + employee[1] + "\n";
+        employeeDetails += "Position: " + employee[2] + "\n";
+        employeeDetails += "------------------------\n";
+    });
+    alert(employeeDetails);
+}
+
+// Function to add a new employee
+function addEmployee() {
+    var name = prompt("Enter the employee's name:");
+    var age = parseInt(prompt("Enter the employee's age:"));
+    var position = prompt("Enter the employee's position:");
+    employees.push([name, age, position]);
+    alert("New employee added successfully!");
+}
+
+// Function to remove an employee by name
+function removeEmployeeByName() {
+    var name = prompt("Enter the name of the employee to remove:");
+    var index = -1;
+    for (var i = 0; i < employees.length; i++) {
+        if (employees[i][0] === name) {
+            index = i;
+            break;
+        }
+    }
+    if (index !== -1) {
+        employees.splice(index, 1);
+        alert(name + " has been removed from the employees list.");
+    } else {
+        alert("Employee not found!");
+    }
+}
+
+// Example usage:
+
+// Display all employee details
+displayEmployees();
+
+// Add a new employee
+addEmployee();
+
+// Display all employee details after addition
+displayEmployees();
+
+// Remove an employee by name
+removeEmployeeByName();
+
+// Display all employee details after removal
+displayEmployees();
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

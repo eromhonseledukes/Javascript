@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Logical Operators
+
+    var age = parseInt(prompt("Enter your age:"));
+    var hasLicence = prompt("Do you have a driver's licence? (Yes/No:)").toLowerCase();
+    if(age >= 18 && hasLicence ==='yes'){
+    alert("Eligible to drive.");
+    }
+    else {
+        alert("Not Eligible to drive.");
+   }
+
+    </script>
+
+    <script>
+        // Operators to perform Addition, Subtraction, Multiplication and Division based on users input
+        function calculator(){
+        var num1 = parseInt(prompt("Enter first number:"));
+        var num2 = parseInt(prompt("Enter second number"));
+
+        if(isNaN(num1) || isNaN(num2)){ 
+            alert("Invalid input, please enter a valid number");
+            return;
+        }
+        var addition = num1 + num2;
+        alert("Addition result is "+ addition);
+
+        var subtraction = num1 - num2;
+        alert("subtraction result is "+ subtraction);
+
+        var multiplication = num1 * num2;
+        alert("multiplication result is "+ multiplication);
+
+        //conditional statement before division
+
+        if(num2 != 0){
+        var division = num1 / num2;
+        alert("division result is "+ division);
+        }
+        else{
+            alert("You can not divide by zero");
+        }
+    }
+    </script>
+    <button onclick="calculate()">calculate</button>
+
+     <script>
+        function calculate(){
+var num1 = parseInt(prompt("Enter first number:"));
+        var num2 = parseInt(prompt("Enter second number"));
+
+        if(isNaN(num1) || isNaN(num2)){ 
+            alert("Invalid input, please enter a valid number");
+            return;
+        }
+
+        //prompt the user for the operation choice
+        var operation = prompt("Choose Operation: \n1. Addition (+) \n2. Subtraction (-) \n3. Multiplication (*) \n4. Division (/)");
+
+        //switch Statement
+        switch(operation){
+            case '+':
+            case 'Addition':
+            alert("Addition result:" + (num1 + num2));
+            break;
+
+            case '-':
+            case 'Subtraction':
+            alert("Subtraction result:" + (num1 - num2));
+            break;
+
+            case '*':
+            case 'Multiplication':
+            alert("Multiplication result:" + (num1 * num2));
+            break;
+
+            case '/':
+            case 'Division':
+                //v
+                if(num2 != 0){
+            alert ("Division result:" + (num1 / num2));
+                }
+        else{
+            alert("you cannot divide by zero");
+        }
+        break;
+        default:
+            alert("Invalid operation. Please choose a valid operation.")
+    }
+}
+<button onclick="calculate()">Calculate</button>
+     </script>
+
+     
+    
+</body>
+</html> 

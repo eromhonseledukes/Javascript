@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAYS IN JAVA SCRIPT</title>
+
+
+<script>
+
+var employees = [
+    ["John Max", 30, "database Administrator"],
+    ["Lawrence Okon", 35, "Web Developer"],
+    ["Beatrice Olawale", 23, "Junion Software Engineer"],
+    ["Tosin Benson", 21, "Secretary"],
+    ["Adeolu Ajayi", 28, "HM" ],
+    ]
+
+    function DisplayEmployees() {
+        var EmployeeDetails = "Employee Details: \n";
+        employees.forEach(function(employee, index) {
+            EmployeeDetails += "Employee" +(index +1) +"\n";
+            EmployeeDetails += "Name :" + employee[0] + "\n";
+            EmployeeDetails += "Age :" + employee[0] + "\n";
+            EmployeeDetails += "Position:" + employee[0] + "\n";
+            
+            EmployeeDetails += "------------------------\n";
+
+        })
+        alert(EmployeeDetails());
+
+    }
+    DisplayEmployees();
+
+
+    </Script>
+    
+    
+</body>
+</html>
+    </script>
+</head>
+<body>
+    

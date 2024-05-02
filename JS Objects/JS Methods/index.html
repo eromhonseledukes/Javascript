@@ -1,0 +1,74 @@
+<!--methods are behaviour of an object/entities. two types f methods ie built in methods and custom methods. built in method comes with javascript language, you dont create it when writing , just call them into the programme, but custom methods are created by programmer or software developer , methods are always associated with an object, you can seperate a method from an object, a-->
+<!--A function can stand on its own, its independent of an object and its a reusable piece of code-->
+<!--we have objects that are built in to javascrip just like we have built in methods-->
+
+<!--Documents objects
+A Document object is the route node of an html document-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Difference between document.write and Document.writeln is 
+    when you use write line the document will display on a new line, while write will display on the same line-->
+    <!--'<pre>' means preformatted tag-->
+    <script>document.write('<pre>')
+    document.writeln("my first javascript method  ");
+    document.writeln("Java lovers");
+    </script>
+
+    <!--Functions-->
+    <!--different types of function are 
+    1. alert function. used for displaying a dialogue box, with an ok button
+    2. confirm function. It displays a dialogue box with two buttons ie ok and cancel buttons eg when you want to delete or close a file, you get a dialogue button asking if you want to close a file or delete. thats a confirm box
+     3. parseInt function: parse meansn to convert while Int means interger, which is convert a string to interger. 
+     4. parseFloat: Converts a string into a number with decimal point
+     5. prompt function: Used for displaying a dialogue box that accept an input value through a text box
+     6. IsNAN function: used to check whether a value is not a number-->
+
+     <script>
+     var value=""
+     var num1 = prompt("enter first value to perform the multiplication operation", value);
+     var num2 = prompt("enter second value to perform the multiplication operation", value);
+     var result=eval(num1*num2)
+     document.write("result of multiplying "+ num1 + "and" + num2 +" is "+ result + ".");
+
+     </script>
+
+     <script>
+        var loanAmount = prompt("Enter loan amount ($) :", "");
+        var loanDuration = prompt("Enter loan duration (in years) :", "");
+        loanAmount = parseFloat(loanAmount);
+        loanDuration = parseInt(loanDuration);
+        var interestRate = 8;
+        var interestAmount, totalAmount;
+        
+        if(isNaN(loanAmount) || isNaN(loanDuration) || loanAmount <= 0 || loanDuration <= 0){
+            alert("please enter valid number for loan amount or loan duration");
+        }
+        // using Operators: assignment, multiplication, division operator
+        else{
+            interestAmount = (loanAmount * interestRate * loanDuration)/100;
+            totalAmount = loanAmount + interestAmount;
+            document.write("<b>Total amount to be paid ($):</b> " + totalAmount.toFixed(2) + "<br />");
+        }
+        // increment and decrement oporators
+        // Used for increasing or decreasing the value of a variable by 1
+        var number =3;
+        alert("number after increment ="+ --number)// will return 2
+        //Logical Operators: Binary operators that performs logical operation on 2 operands
+       
+
+     </script>
+        
+
+
+    
+</head>
+<body>
+    
+</body>
+</html>

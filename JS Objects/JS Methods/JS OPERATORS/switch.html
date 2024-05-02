@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function calculate(){
+var num1 = parseInt(prompt("Enter first number:"));
+        var num2 = parseInt(prompt("Enter second number"));
+
+        if(isNaN(num1) || isNaN(num2)){ 
+            alert("Invalid input, please enter a valid number");
+            return;
+        }
+        
+        //prompt the user for the operation choice
+        var operation = prompt("Choose Operation: \n1. Addition (+) \n2. Subtraction (-) \n3. Multiplication (*) \n4. Division (/)");
+
+        //switch Statement
+        switch(operation){
+            case '+':
+            case 'Addition':
+            alert("Addition result:" + (num1 + num2));
+            break;
+
+            case '-':
+            case 'Subtraction':
+            alert("Subtraction result:" + (num1 - num2));
+            break;
+
+            case '*':
+            case 'Multiplication':
+            alert("Multiplication result:" + (num1 * num2));
+            break;
+
+            case '/':
+            case 'Division':
+                //v
+                if(num2 != 0){
+            alert ("Division result:" + (num1 / num2));
+                }
+        else{
+            alert("you cannot divide by zero");
+        }
+        break;
+        default:
+            alert("Invalid operation. Please choose a valid operation.");
+    }
+}
+     </script>
+    
+    </script>
+</head>
+
+<body> 
+    <button onclick="calculate()">Calculate</button>
+</body>
+</html>
